@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { carDetail } from '../actions'
-import { bindAdctionsCreators } from 'redux'
+import { bindActionCreators } from 'redux'
 
 class Car extends Component {
+
+    componentWillMount() {
+        this.props.carDetail(this.props.match.params.id)
+    }
+
     render() {
         return (
             <div>
@@ -15,12 +20,12 @@ class Car extends Component {
 
 function mapStateToProps(state) {
     return {
-        car: state.carDetail
+        carDetail: state.carDetail
     }
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindAdctionsCreators({carDetail}, dispatch)
+    return bindActionCreators({carDetail}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Car)
