@@ -1,6 +1,6 @@
 const URL_ROOT = `http://localhost:3004`
 
-export function getCars(keywords) {
+export const getCars = (keywords) => {
     const request = fetch(`${URL_ROOT}/carsIndex?q=${keywords}`, {
         method: 'GET'
     })
@@ -12,7 +12,7 @@ export function getCars(keywords) {
     }
 }
 
-export function carDetail(id) {
+export const carDetail = (id) => {
     const request = fetch(`${URL_ROOT}/carsIndex?id=${id}`, {
         method: 'GET'
     })
@@ -24,7 +24,7 @@ export function carDetail(id) {
     }
 }
 
-export function clearDetail() {
+export const clearDetail = () => {
     return {
         type: 'CLEAR_DETAIL',
         payload: []

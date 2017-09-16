@@ -5,11 +5,11 @@ import { bindActionCreators } from 'redux'
 
 class Car extends Component {
 
-    componentWillMount() {
+    componentWillMount = () => {
         this.props.carDetail(this.props.match.params.id)
     }
 
-    componentWillUnmount() {
+    componentWillUnmount = () => {
         this.props.clearDetail()
     }
 
@@ -34,7 +34,7 @@ class Car extends Component {
         }
     }
 
-    render() {
+    render = () => {
         return (
             <div>
                 {this.renderDetail(this.props.cars)}
@@ -44,7 +44,6 @@ class Car extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
         cars: state.cars
     }

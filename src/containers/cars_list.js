@@ -27,7 +27,7 @@ class CarsList extends Component {
         }
     }
 
-    render() {
+    render = () => {
         return (
             <div>
                 {this.cardsList(this.props.cars)}
@@ -37,7 +37,6 @@ class CarsList extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
         cars: state.cars
     }

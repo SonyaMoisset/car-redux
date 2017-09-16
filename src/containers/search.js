@@ -12,9 +12,7 @@ class Search extends Component {
         }
     }
 
-    componentDidMount() {
-        console.log(this.state)
-    }
+    componentDidMount = () => {}
 
     searchCars = (event) => {
         event.preventDefault()
@@ -27,7 +25,7 @@ class Search extends Component {
         })
     }
 
-    render() {
+    render = () => {
         return (
             <div className="main-search">
                 <form onSubmit={this.searchCars}>
