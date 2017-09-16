@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 class CarsList extends Component {
 
-    cardsList = ({cars}) => {
-        if (cars) {
-            return cars.map((car) => {
+    cardsList = ({list}) => {
+        if (list) {
+            return list.map((car) => {
                 return (
                     <Link
                         to={`/car/${car.id}`}  
@@ -30,13 +30,14 @@ class CarsList extends Component {
     render() {
         return (
             <div>
-                {this.cardsList(this.props)}
+                {this.cardsList(this.props.cars)}
             </div>
         );
     }
 }
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
         cars: state.cars
     }
