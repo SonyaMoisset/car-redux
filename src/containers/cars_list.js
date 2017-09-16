@@ -9,7 +9,7 @@ class CarsList extends Component {
             return cars.map((car) => {
                 return (
                     <Link
-                        to={`/cars/${car.id}`}  
+                        to={`/car/${car.id}`}  
                         key={car.id}
                         className="car-item">
                         <div className="left">
