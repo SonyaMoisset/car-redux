@@ -27,7 +27,10 @@ body {
 .car-item {
     display: flex;
     border: 1px solid lightgrey;
+    border-radius: 5px;
     margin: 10px;
+    text-decoration: none;
+    color: #3b3b3b;
 }
 
 .car-item .left {
@@ -43,10 +46,18 @@ body {
     padding: 10px;
 }
 
+.car-item .right h4 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.car-item .right h6 {
+    font-size: 15px;
+}
+
 .car-item .right h4,
 .car-item .right h6 {
     margin: 0;
-
 }
 
 .car-detail img {
