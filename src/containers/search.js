@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getCars } from '../actions'
+import { getCars } from '../actions/cars_actions'
 import { bindActionCreators } from 'redux' 
 
 class Search extends Component {
