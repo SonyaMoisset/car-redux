@@ -1,0 +1,12 @@
+.car-detail img {
+    width: 100%;
+}
+
+.car-detail h2,
+.car-detail h4 {
+    margin: 0px;
+}
+
+.car-detail .content {
+    padding: 10px;
+}
