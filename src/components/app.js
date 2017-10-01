@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-import Search from '../containers/search'
-import CarsList from '../containers/cars_list'
+import { Search, CarsList } from '../containers'
 
 export default class App extends Component {
     render() {

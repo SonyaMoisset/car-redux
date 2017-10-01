@@ -15,18 +15,18 @@ class Car extends Component {
 
     renderDetail = ({detail}) => {
         if (detail) {
-            return detail.map((item) => {
+            return detail.map(car => {
                 return (
                     <div
-                        key={item.id}
+                        key={car.id}
                         className="car-detail">
                         <img
-                            src={`/images/${item.image}`}
-                            alt={item.model} />
+                            src={`/images/${car.image}`}
+                            alt={car.model} />
                         <div className="content">
-                            <h2>{item.model}</h2>    
-                            <h4>{item.brand}</h4>
-                            <p>{item.description}</p>
+                            <h2>{car.model}</h2>    
+                            <h4>{car.brand}</h4>
+                            <p>{car.description}</p>
                         </div>
                     </div>
                 )
@@ -34,13 +34,11 @@ class Car extends Component {
         }
     }
 
-    render = () => {
-        return (
-            <div>
-                {this.renderDetail(this.props.cars)}
-            </div>
-        );
-    }
+    render = () => (
+        <div>
+            {this.renderDetail(this.props.cars)}
+        </div>
+    )
 }
 
 function mapStateToProps(state) {
@@ -50,7 +48,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({carDetail, clearDetail}, dispatch)
+    return bindActionCreators({ carDetail, clearDetail }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Car)

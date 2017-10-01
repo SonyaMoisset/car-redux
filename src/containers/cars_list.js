@@ -6,7 +6,7 @@ class CarsList extends Component {
 
     cardsList = ({list}) => {
         if (list) {
-            return list.map((car) => {
+            return list.map(car => {
                 return (
                     <Link
                         to={`/car/${car.id}`}  
@@ -27,13 +27,11 @@ class CarsList extends Component {
         }
     }
 
-    render = () => {
-        return (
-            <div>
-                {this.cardsList(this.props.cars)}
-            </div>
-        );
-    }
+    render = () => (
+        <div>
+            {this.cardsList(this.props.cars)}
+        </div>
+    )
 }
 
 function mapStateToProps(state) {

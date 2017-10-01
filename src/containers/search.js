@@ -14,29 +14,27 @@ class Search extends Component {
 
     componentDidMount = () => {}
 
-    searchCars = (event) => {
+    searchCars = event => {
         event.preventDefault()
         this.props.getCars(this.state.keyword)
     }
 
-    handleChange = (event) => {
+    handleChange = event => {
         this.setState({
             keyword: event.target.value
         })
     }
 
-    render = () => {
-        return (
-            <div className="main-search">
-                <form onSubmit={this.searchCars}>
-                    <input
-                        type="text"
-                        value={this.state.keyword}
-                        onChange={this.handleChange}/>    
-                </form>
-            </div>
-        );
-    }
+    render = () => (
+        <div className="main-search">
+            <form onSubmit={this.searchCars}>
+                <input
+                    type="text"
+                    value={this.state.keyword}
+                    onChange={this.handleChange}/>    
+            </form>
+        </div>
+    )
 }
 
 function mapDispatchToProps(dispatch) {
