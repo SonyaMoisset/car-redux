@@ -9,7 +9,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import reducers from './reducers'
 
 import App from './components/app'
-import Car from './containers/car'
+import { Car }  from './containers'
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)
 
