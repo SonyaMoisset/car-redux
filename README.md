@@ -1,5 +1,7 @@
 # Car Highlights
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SonyaMoisset/Car_REACT-REDUX.svg)](https://greenkeeper.io/)
+
 ## A React/Redux web application where car highlights are fetched from a json file
 
 To see the project:
